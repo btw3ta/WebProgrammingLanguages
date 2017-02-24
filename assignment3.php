@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=windows-1252">
 	<title>Web Data Entry</title>
-	<script type="text/javascript" src="assignment2.js">
+	<script type="text/javascript" src="assignment3.js">
 
 	</script>
 
@@ -17,7 +17,7 @@
       }
 
       body {
-      	font-size: 40px;
+      	font-size: 60px;
       }
 
       #question_box option{
@@ -53,10 +53,6 @@
 		<br/>
 		<!-- Short answer data entry -->
 
-		<div id="div1">
-			
-		</div>
-
 		<fieldset style="visibility: visible" class = "true_false" id="tf_question">
 			<legend>
 				Enter True/False Question
@@ -85,20 +81,20 @@
 			<legend>
 				Enter Multiple Choice Question
 			</legend>
-			<form action ="formHandler.php" method="post" onSubmit="return (validateInput('mc'))">
+			<form action ="formHandler2.php" method="post" onSubmit="return (validateInput('mc'))">
 				Question: <input type="text" name="MCQUESTION" id = "mc_question_input" style="width:400px;">
 				<br/>
 				<span id="ques_msg" style="color:red; font-style:italic; font-size:80%"></span>
 				<div class="answer_color">
 				Answer:
 				<br/>
-				A.<input type="text" name="MCANSWER" id = "mc_ans_1" style="width:400px;">
+				Incorrect 1<input type="text" name="MCANSWER1" id = "mc_ans_1" style="width:400px;">
 				<br/>
-				B.<input type="text" name="MCANSWER" id = "mc_ans_2" style="width:400px;">
+				Incorrect 2<input type="text" name="MCANSWER2" id = "mc_ans_2" style="width:400px;">
 				<br/>
-				C.<input type="text" name="MCANSWER" id = "mc_ans_3" style="width:400px;">
+				Incorrect 3<input type="text" name="MCANSWER3" id = "mc_ans_3" style="width:400px;">
 				<br/>
-				D.<input type="text" name="MCANSWER" id = "mc_ans_4" style="width:400px;">
+				Correct    <input type="text" name="MCANSWER4" id = "mc_ans_4" style="width:400px;">
 				<br/>
 				<span id="ans_msg" style="color:red; font-style:italic; font-size:80%"></span>
 
@@ -115,7 +111,7 @@
 			<legend>
 				Enter Short Answer Question
 			</legend>
-			<form action ="formHandler.php" method="post" onSubmit="return (validateInput('sa'))">
+			<form action ="formHandler3.php" method="post" onSubmit="return (validateInput('sa'))">
 				Question: <input type="text" name="SAQUESTION" id = "sa_question_input" style="width:400px;"> 
 				<br/>
 				<span id="ques_msg_sa" style="color:red; font-style:italic; font-size:80%"></span>
