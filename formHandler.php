@@ -1,7 +1,12 @@
+<?php session_start()?>
 <html>
 <head>
   <title>Confirmation Page</title>
-
+<script type="text/javascript">
+	function submitForm() {
+		window.location = "writeFile.php"
+	}
+</script>
 </head>
 
 <body bgcolor="#EEEEEE">
@@ -18,17 +23,20 @@
     </tr>
 
     <tr>
-      <td width="20%">True false question</td> 
-      <td><?php echo $_POST['TFQUESTION']?></td>      
+      <td width="20%">True-False Question</td> 
+      <td><?php $_SESSION['TFQUESTION'] = $_POST['TFQUESTION'];
+      			echo $_SESSION['TFQUESTION'];?></td>      
     </tr>
     <tr>
-      <td width="20%">true false answer</td> 
-      <td><?php echo $_POST['TFANSWER']?></td>      
+      <td width="20%">True-False Answer</td> 
+      <td><?php $_SESSION['TFANSWER'] = $_POST['TFANSWER'];
+      echo $_SESSION['TFANSWER'];?></td>      
     </tr>
     </table>
 </center>
 
-<center><button type="button" onclick="javascript:history.back()">Back</button></center>
+<center><button style="height:3%;width:5%;background-color:red" type="button" onclick="javascript:history.back()">Back</button></center>
+<center><button style="height:3%;width:5%;background-color:lightgreen" type="button" onclick="submitForm()">Confirm</button></center>
 
 
 </body>
